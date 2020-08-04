@@ -1,0 +1,37 @@
+.mainContainer__videoContainer {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-area: video;
+    background-color: #f9f9f9;
+    padding: 10px;
+}
+
+.mainContainer__videoContainer___recommended {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    background-color: #f9f9f9;
+    padding: 10px;
+    grid-gap: 25px;
+}
+
+.videoCard {
+    border: 1px solid black;
+    grid-column: span 2;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+}
+.videoCard img {
+    width: 100%;
+}
+
+.videoCard__belowVideoInfo {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    grid-gap: 5px;
+}
+@media only screen and (max-width: 700px) {
+    .mainContainer__videoContainer {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

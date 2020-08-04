@@ -1,0 +1,96 @@
+header {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    height: 56px;
+    grid-gap: 10px;
+    align-items: center;
+    grid-template-areas: 
+    "menuNav logo log  search search search search create app settings signIn signIn";
+    justify-items: center;
+}
+
+.header__menu {
+    grid-area: menuNav;
+    cursor: pointer;
+}
+.header__logo {
+    grid-area: logo;
+    cursor: pointer;
+}
+.header__input {
+    grid-area: search;
+    width: 100%;
+}
+.header__input input {
+    width: 100%;
+}
+.header__create {
+    grid-area: create;
+    cursor: pointer;
+    position: relative;
+}
+.header__create div {
+    position: absolute;
+    width: auto;
+    height: auto;
+    background-color: grey;
+    top: 36px;
+    padding: 10px;
+    color: white;
+    left: 0px;
+    font-size: 12px;
+    min-width: 50px;
+    text-align: center;
+}
+.header__app {
+    grid-area: app;
+    cursor: pointer;
+    position: relative;
+}
+.header__app div {
+    position: absolute;
+    width: auto;
+    height: auto;
+    background-color: grey;
+    top: 36px;
+    padding: 10px;
+    color: white;
+    left: 0px;
+    font-size: 12px;
+    min-width: 80px;
+    text-align: center;
+}
+.header__settings {
+    grid-area: settings;
+    cursor: pointer;
+    position: relative;
+}
+.header__settings div {
+    position: absolute;
+    width: auto;
+    height: auto;
+    background-color: grey;
+    top: 36px;
+    padding: 10px;
+    color: white;
+    left: 0px;
+    font-size: 12px;
+    min-width: 50px;
+    text-align: center;
+}
+.header__signIn {
+    grid-area: signIn;
+    display: grid;
+    cursor: pointer;
+}
+.header__signIn a {
+    text-transform: uppercase;
+    border: 1px solid blue;
+    text-decoration: none;
+    color: blue;
+    padding: 10px;
+}
+.display {
+    display: none;
+}
+
