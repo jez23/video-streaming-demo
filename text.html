@@ -1,0 +1,76 @@
+<link rel="stylesheet" href="./css/style.css">
+<script>
+   class Video {
+        constructor(id, title, description, thumbnail) {
+            this.id = id,
+            this.title = title,
+            this.description = description,
+            this.thumbnail = thumbnail
+        }
+    }
+
+const videoSearchResult = [];
+
+  const fetchSearchResults = () => {
+      return fetch('https://www.googleapis.com/youtube/v3/search?part=snippet&q=cats&key=AIzaSyCzITvmAO8Q1gHaYdIxMk2YhJdjdylqbNM')
+      .then(repsonse => repsonse.json())
+        .then(data =>  {
+                    console.log(data.items.length)
+                    for(let i = 0; i < data.items.length; i++){
+                        videoSearchResult[i] = new Video (
+                            data.items[i].id.videoId,
+                            data.items[i].snippet.title,
+                            data.items[i].snippet.description,
+                            data.items[i].snippet.thumbnails.default.url
+                        )
+                    }
+                    return videoSearchResult;
+        })
+        .then(data => updateHTML(data))
+        .then(data => updateDom(data))
+    }
+
+    fetchSearchResults();
+ 
+const updateHTML = (data) => {
+    console.log(data);
+    html = '';
+    for(let i = 0; i < data.length; i++){
+            html += `<a href="https://www.youtube.com/watch?v=${}">
+                        <div class="videoCard">
+                            <img src="${data[i].thumbnail}">
+                            <div class="videoCard__belowVideoInfo">
+                                <div>
+                                    <p>Channel Art</p>
+                                </div>
+                                <div>
+                                    <p>${data[i].title}</p>
+                                </div>
+                            </div>
+                            <p>User Name</p>
+                            <div>
+                                <div>
+                                    <p>Views</p>
+                                </div>
+                                <div>
+                                    <p>Dates added</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>`
+    }
+    return html;
+}
+
+
+const updateDom = (data) => {
+    console.log(data);
+    const container = document.querySelector('.container');
+    container.innerHTML = data;
+}
+
+</script>
+<button onclick="authenticate().then(loadClient)">authorize and load</button>
+<button onclick="execute()">execute</button>
+
+<div class="container"></div>

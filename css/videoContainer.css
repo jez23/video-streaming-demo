@@ -1,3 +1,4 @@
+
 .mainContainer__videoContainer {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
@@ -8,30 +9,108 @@
 
 .mainContainer__videoContainer___recommended {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     background-color: #f9f9f9;
     padding: 10px;
-    grid-gap: 25px;
+    grid-gap: 5px;
+}
+.mainContainer__videoContainer___recommended a {
+    text-decoration: none;
 }
 
-.videoCard {
-    border: 1px solid black;
-    grid-column: span 2;
+.mainContainer__videoContainer___search {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
+    background-color: #f9f9f9;
+    padding: 10px;
+    grid-gap: 5px;
 }
-.videoCard img {
-    width: 100%;
+.mainContainer__videoContainer___search a {
+    text-decoration: none;
 }
 
-.videoCard__belowVideoInfo {
+.videoCard__VideoInfo {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    grid-template-areas: 
+    "thumbNailImage"
+    "thumbNailImage"
+    "videoDescription";
+    background-color: white;
+    background-color: white;
+}
+.videoCard__VideoInfo__summary {
     display: grid;
     grid-template-columns: 30% 70%;
     grid-gap: 5px;
+    padding: 20px;
 }
-@media only screen and (max-width: 700px) {
+.videoCard__VideoInfo p, .videoCard p {
+   color: black;
+}
+.videoCard__VideoInfo img {
+    width: 100%;
+    height: 100%;
+}
+.videoCard__VideoInfo__thumbnail {
+    grid-area: thumbNailImage;
+}
+.videoCard__channelArt {
+    width: 36px;
+    height: 36px;
+    background-color: black;
+    border-radius: 25px;
+    background-image: url("https://via.placeholder.com/150");
+}
+.videoCardSearched {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-areas: 
+    ". video video description description description description .";
+    color: black;
+}
+.videoCardSearched__image {
+    grid-area: video;
+}
+.videoCardSearched__VideoInfo {
+    grid-area: description;
+    display: grid;
+    padding: 20px;
+    background-color: red;
+}
+.videoCardSearched__VideoInfo ul li {
+    list-style: none;
+    display: inline-block;
+}
+
+@media only screen and (max-width: 1350px) {
+    .mainContainer__videoContainer___recommended {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media only screen and (max-width: 960px) {
+    .mainContainer__videoContainer___recommended {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media only screen and (max-width: 750px) {
     .mainContainer__videoContainer {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
     }
+}
+@media only screen and (max-width: 600px) {
+    .mainContainer__videoContainer___recommended {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+.display {
+    display: none;
 }
