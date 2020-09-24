@@ -1,6 +1,9 @@
 @import './fonts.css';
 @import './main.css';
+@import './sideMenu.css';
 @import './header.css';
 @import './mainContainer.css';
 @import './sideNavigation.css';
 @import './videoContainer.css';
+@import './videoModal.css';
+@import './display.css';
