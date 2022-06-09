@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>JTube</title>
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!--  <link rel="stylesheet" href="./assets/css/imports.css">  --> 
+   </head>
+   <body>
+      <header>
+         <div class="header__menu">
+            <p><i class="fa fa-bars" aria-hidden="true"></i></p>
+         </div>
+         <div class="header__logo">
+            <img src="https://jezblackmore.com/jtube/8f0471ffd7a024eb1aacc2b358e68c4f.png" alt="JTube Logo">
+         </div>
+         <div class="header__input">
+            <div class="searchIcon">
+               <input type="text" placeholder="Search">
+               <i class="fa fa-search" aria-hidden="true"></i>
+            </div>
+         </div>
+      </header>
+      <section class="mainContainer">
+         <div class="mainContainer__sideNavigation">
+            <div class="mainContainer__sideNavigation__home">
+               <p><i class="fa fa-home" aria-hidden="true"></i></p>
+               <p>Home</p>
+            </div>
+            <div class="mainContainer__sideNavigation__trending">
+               <p><i class="fa fa-fire" aria-hidden="true"></i></p>
+               <p>Treanding</p>
+            </div>
+           
+            <div class="mainContainer__sideNavigation__history">
+               <p><i class="fa fa-history" aria-hidden="true"></i></p>
+               <p>History</p>
+            </div>
+         </div>
+         <div class="mainContainer__videoContainer">
+            <h3 class="mainContainer__videoContainer__h3">Recommended</h3>
+            <div class="mainContainer__videoContainer___recommended">
+               <!--  Video cards go here -->
+            </div>
+            <div class="mainContainer__videoContainer___search">
+            </div>
+         </div>
+      </section>
+      <div class="sideMenu display">
+         <div class="sideMenu__menu">
+            <div class="sideMenu__menu__nav">
+               <div>
+                  <p class="sideMenuClose"><i class="fa fa-bars" aria-hidden="true"></i></p>
+                  <img src="https://jezblackmore.com/jtube/8f0471ffd7a024eb1aacc2b358e68c4f.png" alt="JTube Logo" class="sideMenuLogo">
+               </div>
+               <div class="mainContainer__modalNavigation__home">
+                  <p><i class="fa fa-home" aria-hidden="true"></i></p>
+                  <p>Home</p>
+               </div>
+               <div class="mainContainer__modalNavigation__trending">
+                  <p><i class="fa fa-fire" aria-hidden="true"></i></p>
+                  <p>Trending</p>
+               </div>
+            
+               <div class="mainContainer__modalNavigation__history">
+                  <p><i class="fa fa-history" aria-hidden="true"></i></p>
+                  <p>History</p>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="videoModal__container display">
+         <div class="videoModal">
+            <div class="videoModal__title">
+               <h3 class="modalTitle">Video Title</h3>
+               <i class="fa fa-times closer" aria-hidden="true"></i>
+            </div>
+            <div class="placeholderVideoContainer"></div>
+            <div class="videoModal__metaData">
+               <div class="modalmetaDataViews">
+                  <p class="modalmetaDataViews__channelName">Channel Name</p>
+                  <p class="modalmetaDataViews__uploaded">Uploaded: <span class="modalmetaDataViews__uploaded"></span></p>
+               </div>
+               <div class="modalDescription">
+                  <p class="modalDescription__text">Desciption</p>
+               </div>
+            </div>
+         </div>
+      </div>
+     <!--  <script type="module" src="./index.js"></script>   -->
+   </body>
+</html>

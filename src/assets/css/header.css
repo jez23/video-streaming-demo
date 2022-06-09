@@ -1,0 +1,138 @@
+header {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    height: 56px;
+    grid-gap: 10px;
+    align-items: center;
+    grid-template-areas: 
+    "menuNav logo logo  search search search search search search search . .";
+    justify-items: center;
+}
+
+.header__menu {
+    grid-area: menuNav;
+    cursor: pointer;
+}
+.header__logo {
+    grid-area: logo;
+    cursor: pointer;
+}
+.header__logo img{
+    height: 30px;
+}
+.header__input {
+    grid-area: search;
+    width: 100%;
+}
+.header__input input {
+    width: 100%;
+    height: 30px;
+    padding: 0px 0px 0px 10px;
+    float: left;
+}
+.searchIcon {
+      position: relative;    
+}
+.searchIcon i {
+    position: absolute;
+    background-color: #F8F8F8;
+    width: 40px;
+    height: 32px;
+    right: -14px;
+    text-align: center;
+    line-height: 31px;
+    border: 1px solid black;
+}
+.header__input input:after {
+    width: 10px;
+    height: 10px;
+    background-color: red;
+}
+.header__create {
+    grid-area: create;
+    cursor: pointer;
+    position: relative;
+}
+.header__create div {
+    position: absolute;
+    width: auto;
+    height: auto;
+    background-color: grey;
+    top: 36px;
+    padding: 10px;
+    color: white;
+    right: 0px;
+    font-size: 12px;
+    min-width: 50px;
+    text-align: center;
+}
+.header__app {
+    grid-area: app;
+    cursor: pointer;
+    position: relative;
+}
+.header__app div {
+    position: absolute;
+    width: auto;
+    height: auto;
+    background-color: grey;
+    top: 36px;
+    padding: 10px;
+    color: white;
+    right: 0px;
+    font-size: 12px;
+    min-width: 80px;
+    text-align: center;
+}
+.header__settings {
+    grid-area: settings;
+    cursor: pointer;
+    position: relative;
+}
+.header__settings div {
+    position: absolute;
+    width: auto;
+    height: auto;
+    background-color: grey;
+    top: 36px;
+    padding: 10px;
+    color: white;
+    right: 0px;
+    font-size: 12px;
+    min-width: 50px;
+    text-align: center;
+}
+.header__signIn {
+    grid-area: signIn;
+    display: grid;
+    cursor: pointer;
+}
+.header__signIn a {
+    text-transform: uppercase;
+    border: 1px solid blue;
+    text-decoration: none;
+    color: blue;
+    padding: 10px;
+}
+.display {
+    display: none;
+}
+
+@media only screen and (max-width: 750px) {
+    .header__signIn{
+        display: none;
+    }
+    header {
+        grid-template-columns: repeat(12, 1fr);
+        height: 56px;
+        grid-gap: 10px;
+        padding: 0px 10px 0px 10px;
+        grid-template-areas: 
+        "menuNav logo search search search search search  search  search search search search ";
+        justify-items: center;
+    }
+    .header__input {
+        width: 80%;
+    }
+
+}

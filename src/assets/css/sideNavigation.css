@@ -1,0 +1,23 @@
+.mainContainer__sideNavigation {
+    display: grid;
+    grid-area: sideNav;
+    justify-content: center;
+    text-align: center;
+}
+.mainContainer__sideNavigation div {
+    padding: 20px;
+    cursor: pointer;
+}
+.mainContainer__sideNavigation div:hover {
+   background-color: #f2f2f2;
+}
+
+.mainContainer__sideNavigation p i {
+    font-size: 20px;
+}
+
+@media only screen and (max-width: 700px) {
+    .mainContainer__sideNavigation {
+        display: none;
+    }
+}
